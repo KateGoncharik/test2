@@ -1,0 +1,138 @@
+@media (min-device-width: 821px) and (max-device-width: 1920px) {
+    body {
+        font-size: 3vh;
+    }
+
+    .sign {
+        display: none;
+    }
+
+    .title {
+        font-size: 4vh;
+    }
+
+    .container:hover .acor-title {
+        color: #000;
+    }
+
+    input:checked~div .sign {
+        transition: transform 0.4s;
+        transform: rotate(45deg);
+    }
+
+    .label:hover~img {
+/* why so? */
+        max-height: 80vh;
+        transition: max-height 0.8s ease-out;
+    }
+
+     .container:hover .sign {
+        /* can we call it in this case just like that : .sign? no */
+        display: flex;
+    }
+
+    label:hover .sign {
+        transform: rotate(45deg);
+        transition: 0.5s;
+    }
+}
+
+/*
+can we write just max-width? */
+@media (max-device-width: 320px) {
+    body {
+        font-size: 2vh;
+    }
+
+    .title {
+        font-size: 3vh;
+    }
+
+    .sign {
+        display: flex;
+    }
+
+    .input:checked~div .sign {
+        transform: rotate(45deg);
+        transition: 0.5s ease;
+    }
+}
+
+@media (min-device-width: 321px) and (max-device-width: 820px) {
+    body {
+        font-size: 4vh;
+    }
+    .titul {
+        font-size: 5vh;
+    }
+    .sign {
+        display: flex;
+    }
+    input:checked~div .sign {
+        transform: rotate(45deg);
+        transition: 0.5s ease;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inika', serif;
+    font-weight: 700;
+}
+
+.title {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 60%;
+}
+
+label {
+    cursor: pointer;
+}
+
+.name-of-acor {
+    display: flex;
+    border-top: 1px solid rgb(150, 150, 150);
+    justify-content: space-between;
+}
+
+img {
+    display: flex;
+    width: 50%;
+    margin-left: 25%;
+    padding-bottom: 2vh;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+}
+
+.acor-title {
+    color: blue;
+}
+
+.input:checked~div .acor-title {
+    color: black;
+}
+
+.label:active {
+    color: blue;
+}
+
+.label:active .acor-title {
+    color: blue;
+}
+
+label:active img {
+    transition: filter 2s ease-out;
+    filter: brightness(1.6);
+}
+
+input:checked~img {
+    max-height: 80vh;
+    transition: max-height 0.8s ease-out;
+}
